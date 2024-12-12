@@ -62,13 +62,13 @@ app.use(bodyParser.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MySQL
-const pool = mysql.createPool({
+/*const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'anjing'
-});
+});*/
 
 // Endpoint untuk menerima upload file gambar dan menyimpan data ruangan
 app.post('/room', uploadGambar.single('gambar_ruangan'), (req, res) => {
